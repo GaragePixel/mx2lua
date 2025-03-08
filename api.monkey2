@@ -27,6 +27,70 @@ Namespace lua.api
 Using lua
 Using libc..
 
+'Added by iDkP for better handling:
+Const LUA_OK:Int = 0
+Const LUA_YIELD:Int = 1
+Const LUA_ERRRUN:Int = 2
+Const LUA_ERRSYNTAX:Int = 3
+Const LUA_ERRMEM:Int = 4
+Const LUA_ERRGCMM:Int = 5
+Const LUA_ERRERR:Int = 6
+
+Const LUA_MULTRET:Int = -1
+
+Const LUA_TNONE:Int = -1
+Const LUA_TNIL:Int = 0
+Const LUA_TBOOLEAN:Int = 1
+Const LUA_TLIGHTUSERDATA:Int = 2
+Const LUA_TNUMBER:Int = 3
+Const LUA_TSTRING:Int = 4
+Const LUA_TTABLE:Int = 5
+Const LUA_TFUNCTION:Int = 6
+Const LUA_TUSERDATA:Int = 7
+Const LUA_TTHREAD:Int = 8
+
+Const LUA_MINSTACK:Int = 20
+
+Const LUA_GCSTOP:Int = 0
+Const LUA_GCRESTART:Int = 1
+Const LUA_GCCOLLECT:Int = 2
+Const LUA_GCCOUNT:Int = 3
+Const LUA_GCCOUNTB:Int = 4
+Const LUA_GCSTEP:Int = 5
+Const LUA_GCSETPAUSE:Int = 6
+Const LUA_GCSETSTEPMUL:Int = 7
+Const LUA_GCISRUNNING:Int = 9
+
+Const LUA_OPADD:Int = 0
+Const LUA_OPSUB:Int = 1
+Const LUA_OPMUL:Int = 2
+Const LUA_OPMOD:Int = 3
+Const LUA_OPPOW:Int = 4
+Const LUA_OPDIV:Int = 5
+Const LUA_OPIDIV:Int = 6
+Const LUA_OPBAND:Int = 7
+Const LUA_OPBOR:Int = 8
+Const LUA_OPBXOR:Int = 9
+Const LUA_OPSHL:Int = 10
+Const LUA_OPSHR:Int = 11
+Const LUA_OPUNM:Int = 12
+Const LUA_OPBNOT:Int = 13
+
+Const LUA_OPEQ:Int = 0
+Const LUA_OPLT:Int = 1
+Const LUA_OPLE:Int = 2
+
+Const LUA_HOOKCALL:Int = 0
+Const LUA_HOOKRET:Int = 1
+Const LUA_HOOKLINE:Int = 2
+Const LUA_HOOKCOUNT:Int = 3
+Const LUA_HOOKTAILCALL:Int = 4
+
+Const LUA_MASKCALL:Int = (1 Shl LUA_HOOKCALL)
+Const LUA_MASKRET:Int = (1 Shl LUA_HOOKRET)
+Const LUA_MASKLINE:Int = (1 Shl LUA_HOOKLINE)
+Const LUA_MASKCOUNT:Int = (1 Shl LUA_HOOKCOUNT)
+
 #Rem monkeydoc Wrapper class for the lua_State struct, allowing for more OO-style usage.
   Also includes some utility methods for better MX2 integration.
 #End
